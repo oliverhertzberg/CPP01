@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ohertzbe <ohertzbe@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/21 17:31:44 by ohertzbe          #+#    #+#             */
-/*   Updated: 2024/06/21 20:05:53 by ohertzbe         ###   ########.fr       */
+/*   Created: 2024/06/21 19:56:53 by ohertzbe          #+#    #+#             */
+/*   Updated: 2024/06/21 20:07:02 by ohertzbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
 
-// default constructor
-Zombie::Zombie(){
-}
+#include <iostream>
 
-// constructor with name parameter
-Zombie::Zombie(std::string name){
-    this->name = name;
-}
+class Zombie{
+    
+    private:
+        std::string name;
+        
+    public:
+        Zombie( std::string name);
+        Zombie();
+        ~Zombie();
+    
+        void announce();
+};
 
-// deconstructor
-Zombie::~Zombie(){
-}
+Zombie* zombieHorde( int N, std::string name );
 
-// announce method
-void    Zombie::announce(){
-    std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
+#endif

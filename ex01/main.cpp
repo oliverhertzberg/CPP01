@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ohertzbe <ohertzbe@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/21 17:31:44 by ohertzbe          #+#    #+#             */
-/*   Updated: 2024/06/21 20:05:53 by ohertzbe         ###   ########.fr       */
+/*   Created: 2024/06/21 20:06:08 by ohertzbe          #+#    #+#             */
+/*   Updated: 2024/06/21 20:41:56 by ohertzbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-// default constructor
-Zombie::Zombie(){
-}
+int main(){
+    
+    Zombie* Horde;
+    int N = 10;
 
-// constructor with name parameter
-Zombie::Zombie(std::string name){
-    this->name = name;
-}
-
-// deconstructor
-Zombie::~Zombie(){
-}
-
-// announce method
-void    Zombie::announce(){
-    std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+    Horde = zombieHorde(N, "BOT");
+    for (int i = 0; i < N; i++){
+        Horde[i].announce();   
+    }
+    
+    delete(Horde);
 }

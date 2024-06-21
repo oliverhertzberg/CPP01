@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ohertzbe <ohertzbe@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/21 17:31:44 by ohertzbe          #+#    #+#             */
-/*   Updated: 2024/06/21 20:05:53 by ohertzbe         ###   ########.fr       */
+/*   Created: 2024/06/21 20:06:24 by ohertzbe          #+#    #+#             */
+/*   Updated: 2024/06/21 20:39:43 by ohertzbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-// default constructor
-Zombie::Zombie(){
-}
+Zombie* zombieHorde( int N, std::string name ){
 
-// constructor with name parameter
-Zombie::Zombie(std::string name){
-    this->name = name;
-}
+    if (N <= 0)
+        return (nullptr);
 
-// deconstructor
-Zombie::~Zombie(){
-}
+    Zombie* Horde = new Zombie[N];
 
-// announce method
-void    Zombie::announce(){
-    std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+    for (int i = 0; i < N; i++){
+        Horde[i] = Zombie(name);
+    }
+    
+    return(Horde);
 }

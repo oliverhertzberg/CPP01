@@ -6,7 +6,7 @@
 /*   By: ohertzbe <ohertzbe@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 17:31:34 by ohertzbe          #+#    #+#             */
-/*   Updated: 2024/06/21 19:55:25 by ohertzbe         ###   ########.fr       */
+/*   Updated: 2024/06/21 20:38:37 by ohertzbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ int main( void ){
     // newZombie function returns pointer to createad zombie that we then can access and call its member function
     Zombieptr->announce();
 
-    free (Zombieptr);   
+    delete(Zombieptr);   
 }
