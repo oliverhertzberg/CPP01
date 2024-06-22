@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ohertzbe <ohertzbe@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/21 23:45:47 by ohertzbe          #+#    #+#             */
-/*   Updated: 2024/06/21 23:59:08 by ohertzbe         ###   ########.fr       */
+/*   Created: 2024/06/22 19:27:19 by ohertzbe          #+#    #+#             */
+/*   Updated: 2024/06/22 19:28:10 by ohertzbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class Weapon{
     
     public:
         Weapon();
+        Weapon::Weapon(std::string weapon);
         ~Weapon();
         
         const std::string& getType();

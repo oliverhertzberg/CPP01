@@ -6,17 +6,27 @@
 /*   By: ohertzbe <ohertzbe@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 23:59:25 by ohertzbe          #+#    #+#             */
-/*   Updated: 2024/06/22 00:00:49 by ohertzbe         ###   ########.fr       */
+/*   Updated: 2024/06/22 19:29:28 by ohertzbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMAN_A
-#define HUMAN_A
+#ifndef HUMANA_HPP
+#define HUMANA_HPP
 
-class Human_A{
+#include <iostream>
+#include "Weapon.hpp"
 
-    public:
+class HumanA{
+
+    private:
+        Weapon&     type;
+        std::string name;
         
+    public:
+        HumanA(const std::string name, Weapon& weapon);
+        ~HumanA();
+        
+        void    attack();
 };
 
 #endif
