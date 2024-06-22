@@ -6,14 +6,14 @@
 #    By: ohertzbe <ohertzbe@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/21 23:39:45 by ohertzbe          #+#    #+#              #
-#    Updated: 2024/06/21 23:44:17 by ohertzbe         ###   ########.fr        #
+#    Updated: 2024/06/22 19:40:26 by ohertzbe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC := cc
+CC := c++
 CFLAGS := -Wall -Wextra -Werror
 NAME := UnnecessaryViolence
-SRC := main.cpp Weapon.hpp Weapon.cpp HumanA.hpp HumanA.cpp HumanB.hpp HumanB.cpp
+SRC := main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 OBJ := $(patsubst %.cpp, %.o, $(SRC))
 
 all: $(NAME)
