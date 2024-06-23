@@ -6,7 +6,7 @@
 /*   By: ohertzbe <ohertzbe@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 15:35:33 by ohertzbe          #+#    #+#             */
-/*   Updated: 2024/06/23 18:53:36 by ohertzbe         ###   ########.fr       */
+/*   Updated: 2024/06/23 18:55:23 by ohertzbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ void    Harl::complain( std::string level ) {
         if (level == levels[i]) {
             
             switch (i) {
+                
                 case DEBUG:
                 (this->*(actions[DEBUG]))();    
                 
