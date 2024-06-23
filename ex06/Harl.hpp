@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ohertzbe <ohertzbe@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/23 15:35:29 by ohertzbe          #+#    #+#             */
-/*   Updated: 2024/06/23 18:27:18 by ohertzbe         ###   ########.fr       */
+/*   Created: 2024/06/23 15:35:31 by ohertzbe          #+#    #+#             */
+/*   Updated: 2024/06/23 18:35:05 by ohertzbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#ifndef HARL_HPP
+#define HARL_HPP
 
-int main() {
+#include <iostream>
+#include <string>
+
+class Harl {
+    private:
+        void    debug( void );
+        void    info ( void );
+        void    warning ( void );
+        void    error ( void );
     
-    Harl Haaaaaaaarl;
-
-    Haaaaaaaarl.complain("");
-    std::cout << std::endl;
+    enum {DEBUG, INFO, WARNING, ERROR};
     
-    Haaaaaaaarl.complain("DEBUG");
-    std::cout << std::endl;
+    public:
+        Harl();
+        ~Harl();
+        
+        void    complain( std::string level );
+};
 
-    Haaaaaaaarl.complain("INFO");
-    std::cout << std::endl;
 
-    Haaaaaaaarl.complain("WARNING");
-    std::cout << std::endl;
-
-    Haaaaaaaarl.complain("ERROR");
-    std::cout << std::endl;
-}
+#endif

@@ -6,28 +6,20 @@
 /*   By: ohertzbe <ohertzbe@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 15:35:29 by ohertzbe          #+#    #+#             */
-/*   Updated: 2024/06/23 18:27:18 by ohertzbe         ###   ########.fr       */
+/*   Updated: 2024/06/23 18:52:36 by ohertzbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-int main() {
+int main(int argc, char **argv) {
     
-    Harl Haaaaaaaarl;
+    Harl        harl;
+    std::string input;
 
-    Haaaaaaaarl.complain("");
-    std::cout << std::endl;
-    
-    Haaaaaaaarl.complain("DEBUG");
-    std::cout << std::endl;
-
-    Haaaaaaaarl.complain("INFO");
-    std::cout << std::endl;
-
-    Haaaaaaaarl.complain("WARNING");
-    std::cout << std::endl;
-
-    Haaaaaaaarl.complain("ERROR");
-    std::cout << std::endl;
+    if (argc != 2) {
+        std::cout << "Enter log level as argument please!" << std::endl;
+        return (1);
+    }
+    harl.complain(argv[1]);
 }
